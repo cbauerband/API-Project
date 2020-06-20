@@ -1,7 +1,7 @@
 const baseURL = ('https://ghibliapi.herokuapp.com/films');
 
 let characterInfo = [
-  {imageURL: './pics/Ashitaka.jpg', correctMovie: 'Princess Mononoke'},
+  {imageURL: './pics/Ashitaka.jpg', correctMovie: `Princess Mononoke`},
   {imageURL: './pics/San.jpg', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Eboshi.jpg', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Jigo.jpg', correctMovie: 'Princess Mononoke'},
@@ -11,8 +11,14 @@ let characterInfo = [
   {imageURL: './pics/Yakul.jpg', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Shishigami.png', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Moro.jpg', correctMovie: 'Princess Mononoke'},
-  {imageURL: './pics/Jiji.png', correctMovie: 'Kiki Delivery Service'},
+  {imageURL: './pics/Jiji.png', correctMovie: 'Kiki\'s Delivery Service'},
   {imageURL: './pics/Satsuki.png', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Mei.png', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Tatsuo.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Yasuko.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Granny.png', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Kanta.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Totoro.jpg', correctMovie: 'My Neighbor Totoro'},
   {imageURL: './pics/Chu.jpg', correctMovie: 'My Neighbor Totoro'},
   {imageURL: './pics/Chibi.jpg', correctMovie: 'My Neighbor Totoro'},
   {imageURL: './pics/Catbus.jpg', correctMovie: 'My Neighbor Totoro'},
@@ -79,10 +85,6 @@ if (characterJson[randomCharacterStart].films[0].includes(selectedFilm)
 getNewCharacterData();
 document.getElementById("movie-choices").selectedIndex = 0;
 
-//annoucement if game is won
-if (correctCount === 5) {
-  alert ("You won!");
-}
 function displayRandomCharacter(characterJson) {
   //come up with a random number between 0-31
   //need name and photo
@@ -100,7 +102,10 @@ function displayRandomCharacter(characterJson) {
 function submitAnswer() {
   if (movieChoices.value == characterInfo[randomNumberSelected].correctMovie) {
     alert ('You are correct')
+    window.location.reload(true);
   } else {
     alert ('You are wrong')
+    window.location.reload(true);
   }
 }
+
