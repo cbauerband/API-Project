@@ -12,7 +12,20 @@ let characterInfo = [
   {imageURL: './pics/Shishigami.png', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Moro.jpg', correctMovie: 'Princess Mononoke'},
   {imageURL: './pics/Jiji.png', correctMovie: 'Kiki Delivery Service'},
-  {imageURL: './pics/Satsuki.png', correctMovie: 'My Neighbor Totoro'}
+  {imageURL: './pics/Satsuki.png', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Chu.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Chibi.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Catbus.jpg', correctMovie: 'My Neighbor Totoro'},
+  {imageURL: './pics/Niya.jpg', correctMovie: 'The Secret World of Arrietty'},
+  {imageURL: './pics/Renaldo.jpg', correctMovie: 'The Cat Returns', correctMovie: 'Whisper of the Heart'},
+  {imageURL: './pics/Catking.jpg', correctMovie: 'The Cat Returns'},
+  {imageURL: './pics/Yuki.jpg', correctMovie: 'The Cat Returns'},
+  {imageURL: './pics/Haru.jpg', correctMovie: 'The Cat Returns'},
+  {imageURL: './pics/Baron.jpg', correctMovie: 'The Cat Returns'},
+  {imageURL: './pics/Natori.png', correctMovie: 'The Cat Returns'},
+  {imageURL: './pics/Muska.jpg', correctMovie: 'Castle in the Sky'},
+  {imageURL: './pics/Marco.jpg', correctMovie: 'Porco Rosso'},
+  {imageURL: './pics/Sosuke.jpg', correctMovie: 'Ponyo'}
 ]
 let movieChoices = document.getElementById('movie-choices');
 let characterImage = document.getElementById('character-image');
@@ -83,13 +96,8 @@ function displayRandomCharacter(characterJson) {
   let image = document.createElement('img');
   image.src = characterInfo[randomNumber].imageURL;
   characterImage.appendChild(image);
-  //go find images
-  //update line random number to account for all pictures
-  //
 }
 function submitAnswer() {
-  //take what is in drop down menu and compare it to array
-  //
   if (movieChoices.value == characterInfo[randomNumberSelected].correctMovie) {
     alert ('You are correct')
   } else {
