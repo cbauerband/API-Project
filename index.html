@@ -10,10 +10,16 @@
     <div id="container">
         <h1>Studio Ghibli Character Quiz!</h1>
         <h3>Can You Guess Which Movie These Characters Came From? Choose From the Drop Down List!</h3>
-    <div class="character-image" id="character-image"></div>
-    <h3 class="character-name" id="character-name"></h3>
-    <select id="movie-choices"><option value="">Choose Your Answer</select>
+        <p>Select Difficulty Level:</p>
+        <div id="button-wrapper">
+        <button id="easyButton" onclick="easyMode()">Easy: Guess in Three Attempts</button>
+        <button id="hardButton" onclick="hardMode()">Hard: Guess in One Attempt</button>
+        </div>
+        <div class="character-image" id="character-image"></div>
+        <h3 class="character-name" id="character-name"></h3>
+        <select id="movie-choices"><option value="">Choose Your Answer</select>
         <button class="submit" id="submit">Submit</button>
+        <p>Number of Previous Attempts: <span id="attempts"></span></p>
         <div class="number-correct"></div>
         <div class="number-incorrect"></div>
     <script src="./ghibli.js"></script>
